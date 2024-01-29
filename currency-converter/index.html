@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="https://fav.farm/💱" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="currency-container">
+        <h1>Currency<br />Converter</h1>
+        <div class="input-box">
+          <label for="amount">Enter amount</label>
+          <input type="text" id="amount" placeholder="100" required />
+        </div>
+        <div class="currency">
+          <div class="box">
+            <select
+              class="select-option"
+              name="from-currency"
+              id="fromCurrency"
+            >
+              <option value="USD">United States Dollar</option>
+            </select>
+          </div>
+          <div>
+            <span>TO</span>
+          </div>
+          <div class="box">
+            <select class="select-option" name="to-currency" id="toCurrency">
+              <option value="USD">United States Dollar</option>
+            </select>
+          </div>
+          <button class="convert">Convert</button>
+          <p class="result"></p>
+          <p class="error"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./currencies.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
