@@ -10,8 +10,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Install dependencies
+      run: npm install --save-dev prettier
     - name: Run script
       run: node .github/scripts/update_links.js
+    - name: Run Prettier
+      run: npx prettier --write .
     - name: Commit and push changes
       uses: EndBug/add-and-commit@v9
       with:
