@@ -8,6 +8,7 @@ body {
   background-color: #313244;
   color: #cdd6f4;
   border-color: #4c4f69;
+  transition: transform 0.3s ease-in-out;
 }
 
 .list-group-item:hover {
