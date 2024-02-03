@@ -1,0 +1,161 @@
+/*Reset default browser styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Set up body*/
+body {
+  background-color: #080808;
+  color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*Set up section*/
+section {
+  flex-basis: 55%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+section > p {
+  margin-bottom: 1.2rem;
+  color: #b3b3b3;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #222;
+  color: #f2f2f2;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  height: 7rem;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 4px #00ffff;
+}
+
+/*Styling for fieldset*/
+fieldset {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border-color: #222;
+  box-shadow: 1px 2px 5px #222;
+}
+
+legend {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-variant: small-caps;
+}
+
+.radio-group {
+  margin: 0 0 1rem 1rem;
+  color: #b3b3b3;
+}
+
+option {
+  font-size: 1rem;
+}
+
+button {
+  background-color: #00ffff;
+  color: #080808;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #b3b3b3;
+  color: #00ffff;
+}
+
+/*Styling for aside*/
+aside {
+  flex: 1;
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 4px;
+  position: sticky;
+  top: 32px;
+}
+
+h3 {
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+  font-variant: small-caps;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+address {
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #b3b3b3;
+  line-height: 1.4;
+}
+
+footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+  color: #b3b3b3;
+}
+
+/*Media query for smaller screens*/
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    width: 95%;
+  }
+
+  aside {
+    margin-top: 2rem;
+  }
+}
