@@ -14,7 +14,6 @@ body {
   background-color: #45475a;
   transform: scale(1.01);
   box-shadow: 0 10px 25px rgba(76, 79, 105, 0.1);
-  cursor: pointer;
 }
 
 .btn-light {
