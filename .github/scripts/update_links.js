@@ -21,7 +21,17 @@ const toTitleCase = (str) =>
 
 // Generate the list items for the HTML and Markdown files
 const htmlListItems = projectDirs
-  .map((dir) => `<li><a href="./${dir}">${toTitleCase(dir)}</a></li>`)
+  .map(
+    (dir) => `\
+      <li class="list-group-item">
+        <div class="project-item">
+          <h5>${toTitleCase(dir)}</h5>
+          <a href="./${dir}" class="btn btn-light"
+            >Go to Project</a
+          >
+        </div>
+      </li>`
+  )
   .join("\n");
 console.log(htmlListItems);
 
@@ -30,7 +40,7 @@ const indexPath = path.join(__dirname, "../..", "index.html");
 console.log(indexPath);
 let indexHtml = fs.readFileSync(indexPath, "utf8");
 indexHtml = indexHtml.replace(
-  /<ul id="project-list">[\s\S]*?<\/ul>/,
-  `<ul id="project-list">\n${htmlListItems}\n</ul>`
+  /<ul class="list-group" id="project-list">[\s\S]*?<\/ul>/,
+  `<ul class="list-group" id="project-list">\n${htmlListItems}\n</ul>`
 );
 fs.writeFileSync(indexPath, indexHtml);
