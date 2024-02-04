@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  cursor: url(../images/cursor.png), default;
+  background-color: #c0c86d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.bg {
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+.worm-box {
+  width: 1200px;
+}
+
+.worm-container {
+  overflow: hidden;
+  margin-top: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+.worm {
+  width: 1200px;
+}
+
+.hole-container {
+  width: 20%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hole {
+  background: black;
+  border-radius: 50%;
+  overflow: visible;
+  width: 150px;
+  height: 150px;
+}
+
+.mole {
+  position: relative;
+  width: 210px;
+  right: 30px;
+}
+
+.hungry {
+  cursor: url(../images/cursor-worm.png), pointer;
+}
+
+.gone {
+  display: none;
+}
+
+.win {
+  max-width: 97vw;
+  max-height: 97vh;
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
